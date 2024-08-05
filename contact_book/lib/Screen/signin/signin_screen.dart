@@ -1,12 +1,10 @@
 import 'dart:convert';
-
 import 'package:contact_book/Screen/home/home_screen.dart';
 import 'package:contact_book/Screen/signup/signup_screen.dart';
 import 'package:contact_book/coman/snackbar.dart';
 import 'package:contact_book/key_variable/key_variable.dart';
 import 'package:contact_book/services/shared_preference.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
@@ -127,7 +125,9 @@ class _SigninScreenState extends State<SigninScreen> {
                               backgroundColor: Colors.white,
                               foregroundColor: Colors.black),
                           onPressed: () {
-                            signinfunction();
+                            if (!globalKey.currentState!.validate()) {
+                              signinfunction();
+                            }
                           },
                           child: Text("SignIn")),
                     )
