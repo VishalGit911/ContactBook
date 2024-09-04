@@ -125,7 +125,7 @@ class _SigninScreenState extends State<SigninScreen> {
                               backgroundColor: Colors.white,
                               foregroundColor: Colors.black),
                           onPressed: () {
-                            if (!globalKey.currentState!.validate()) {
+                            if (globalKey.currentState!.validate()) {
                               signinfunction();
                             }
                           },

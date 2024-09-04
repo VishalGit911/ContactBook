@@ -187,7 +187,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 foregroundColor: Colors.black),
                             onPressed: () {
                               print("object");
-                              if (globalKey.currentState!.validate()) {
+                              if (!globalKey.currentState!.validate()) {
                                 fname = "Please enter First Name";
                                 lname = "Please enter Last Name";
                                 gmail = "Please enter Gmail";
